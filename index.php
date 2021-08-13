@@ -15,13 +15,16 @@
 
   <!-- Custom fonts for this template -->
   <link href="http://wordpressexercise.local/wp-content/themes/myblog/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
-  <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
-  <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
 
   <!-- Custom styles for this template -->
-  <link href="http://wordpressexercise.local/wp-content/themes/myblog/vendor/fontawesome-free/css/clean-blog.min.css" rel="stylesheet">
+  <link href="http://wordpressexercise.local/wp-content/themes/myblog/css/clean-blog.min.css" rel="stylesheet">
 
+  <?php wp_head(); ?>
 </head>
+
+
 
 <body>
 
@@ -59,7 +62,7 @@
       <div class="row">
         <div class="col-lg-8 col-md-10 mx-auto">
           <div class="site-heading">
-            <h1>Clean Blog</h1>
+            <h1>Clean Blog <?php echo date('Y'); ?></h1>
             <span class="subheading">A Blog Theme by Start Bootstrap</span>
           </div>
         </div>
@@ -74,7 +77,7 @@
         <div class="post-preview">
           <a href="post.html">
             <h2 class="post-title">
-              Man must explore, and this is exploration at its greatest
+              <?php the_title(); ?>
             </h2>
             <h3 class="post-subtitle">
               Problems look mighty small from 150 miles up
@@ -178,6 +181,7 @@
   <!-- Custom scripts for this template -->
   <script src="js/clean-blog.min.js"></script>
 
+  <?php wp_footer(); ?>   
 </body>
 
 </html>
