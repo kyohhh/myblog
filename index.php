@@ -82,7 +82,7 @@
                   <?php the_title(); ?>
                 </h2>
                 <h3 class="post-subtitle">
-                  
+                  <?php the_excerpt(); //抜粋文 ?>
                 </h3>
               </a>
               <p class="post-meta">Posted by
