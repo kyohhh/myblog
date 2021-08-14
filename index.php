@@ -77,7 +77,7 @@
         <?php if (have_posts()): //投稿があればtrueなければfalse ?>
           <?php while (have_posts()): the_post(); //ループ構文?>
             <div class="post-preview">
-              <a href="post.html">
+              <a href="<?php the_permalink(); ?>">
                 <h2 class="post-title">
                   <?php the_title(); ?>
                 </h2>
