@@ -86,7 +86,7 @@
                 </h3>
               </a>
               <p class="post-meta">Posted by
-                <a href="#">Start Bootstrap</a>
+                <?php the_author(); ?>
                 on <?php the_time(get_option('date_format')); ?></p>
             </div>
             <hr>
