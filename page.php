@@ -18,7 +18,10 @@
   <!-- Page Header -->
   <?php if (have_posts()): ?>
     <?php while (have_posts()): the_post(); ?>
-      <header class="masthead" style="background-image: url('img/about-bg.jpg')">
+      <?php
+        $eyecatch = get_eyecatch_with_defult();
+      ?>
+      <header class="masthead" style="background-image: url('<?php echo $eyecatch[0]; ?>')">
         <div class="overlay"></div>
         <div class="container">
           <div class="row">
