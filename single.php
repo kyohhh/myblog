@@ -11,12 +11,12 @@
 
 <body <?php body_class(); //bodyにclassを付与 ?>>
 
+  <!-- Navigation -->
   <?php get_template_part('includes/header'); ?>
 
+  <!-- Page Header -->
   <?php if (have_posts()): ?>
     <?php while (have_posts()): the_post(); ?>
-
-      <!-- Page Header -->
       <?php
       if (has_post_thumbnail()):
         $id = get_post_thumbnail_id(); //投稿のアイキャッチ画像が設定されている場合はアイキャッチ画像のIDを返す
