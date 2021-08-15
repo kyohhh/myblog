@@ -1,5 +1,7 @@
 <!DOCTYPE html>
-<html lang="en">
+
+<html <?php language_attributes(); //html要素のlang属性を出力
+        ?>>
 
 <head>
 
@@ -7,7 +9,7 @@
 
 </head>
 
-<body>
+<body <?php body_class(); //bodyにclassを付与 ?>>
 
   <?php get_template_part('includes/header'); ?>
 

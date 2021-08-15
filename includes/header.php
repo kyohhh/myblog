@@ -1,3 +1,4 @@
+<?php wp_body_open(); //bodyタグを開いた直後に何かを挿入するときに使用ex.Googleタグマネージャー ?>
   <!-- Navigation -->
   <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
     <div class="container">
