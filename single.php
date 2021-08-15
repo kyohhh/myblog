@@ -15,7 +15,15 @@
     <?php while (have_posts()): the_post(); ?>
 
       <!-- Page Header -->
-      <header class="masthead" style="background-image: url('img/post-bg.jpg')">
+      <?php
+      if (has_post_thumbnail()):
+        $id = get_post_thumbnail_id(); //投稿のアイキャッチ画像が設定されている場合はアイキャッチ画像のIDを返す
+        $img = wp_get_attachment_image_src($id, 'large'); //wp_get_attachment_image_src 添付された画像を取り出す
+      else:
+        $img = array(get_template_directory_uri(). '/img/post-bg.jpg');
+      endif;
+      ?>
+      <header class="masthead" style="background-image: url('<?php echo $img[0]; //配列[0]で画像のpathだけを取り出す ?>')">
         <div class="overlay"></div>
         <div class="container">
           <div class="row">
