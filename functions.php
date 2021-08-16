@@ -1,7 +1,15 @@
 <?php
 add_action('init', function(){
+  add_theme_support('title-tag');
+  //アイキャッチ画像のサポート追加
   add_theme_support('post-thumbnails');
-}); //アイキャッチ画像のサポート追加
+
+  //メニューをサポート
+  register_nav_menus([
+    'global_nav' => 'グローバルナビゲーション'
+
+  ]);
+});
 
 /* アイキャッチ画像がなければ、標準画像を取得する */
 function get_eyecatch_with_defult() {
